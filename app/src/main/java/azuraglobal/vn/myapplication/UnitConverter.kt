@@ -10,12 +10,12 @@ fun dpToPx(dp: Dp): Float {
     return dp.value * density
 }
 
-
 @Composable
 fun pxToDp(px: Float): Dp {
     val density = LocalDensity.current.density // Get the screen density
     return Dp(px / density) // Convert px to dp
 }
+
 fun RatingViewModel.RatingStarState.toRatingModel(): RatingModel {
     return when (this) {
 

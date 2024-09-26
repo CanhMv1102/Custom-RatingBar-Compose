@@ -24,15 +24,17 @@ data class NoticeBox(
 
 data class NoticeText(
     val text: String,
-    val size: Float,
+    val sizeInDp: Float,
     val width: Float,
-    val height: Float
+    val height: Float,
+    var startOffset: Float = 0f,
+    var topOffset: Float = 0f
 )
 
 data class Star(
     var xOffset: Float = 0f,
     var yOffset: Float = 0f,
-    var imageBitmap: ImageBitmap,
+    var imageResource: ImageBitmap ? = null,
     var xRange: ClosedFloatingPointRange<Float> = 0f..0f,
     var yRange: ClosedFloatingPointRange<Float> = 0f..0f
 )

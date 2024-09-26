@@ -56,11 +56,10 @@ fun ShowRatingDialog(
     fun onClickRate() {
         if (currentStar == RatingViewModel.RatingStarState.COMPLETED) {
             ratingViewModel.resetDialog()
-            onDismissRequest.invoke()
-            return
+            onDismissRequest()
+        }else{
+            ratingViewModel.onRatingCompleted()
         }
-
-        ratingViewModel.onRatingCompleted()
     }
 
     val ratingModel = currentStar.toRatingModel()
@@ -119,15 +118,16 @@ fun ShowRatingDialog(
                         modifier = Modifier.padding(top = 5.dp, start = 15.dp, end = 15.dp)
                     )
 
-                    Spacer(modifier = Modifier.height(20.dp))
-                    Log.i(TAG, "ShowRatingDialog: $parentWidth")
-                    CustomRatingBar(
-                        ratingModel = ratingModel,
-                        parentWidth = parentWidth,
-                        onStarClick = {
-                            ratingViewModel.onStarChange(it)
-                        }
-                    )
+                   if (ratingModel.starCount != RatingViewModel.RatingStarState.COMPLETED.numberOfStar) {
+                       Spacer(modifier = Modifier.height(20.dp))
+                       CustomRatingBar(
+                           ratingModel = ratingModel,
+                           parentWidth = parentWidth,
+                           onStarClick = {
+                               ratingViewModel.onStarChange(it)
+                           }
+                       )
+                   }
 
                     Spacer(modifier = Modifier.height(20.dp))
                     Button(

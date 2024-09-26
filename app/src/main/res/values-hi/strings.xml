@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="rating_dialog_description">Our development team has worked very diligently. Thank you for leaving a positive review.</string>
+    <string name="best_rating_for_us">हमारे लिए सर्वश्रेष्ठ रेटिंग</string>
+    <string name="ok">Ok</string>
+    <string name="rating_0_star_title">Thank you for using the app!</string>
+    <string name="rating_0_star_description">We would appreciate your review!</string>
+    <string name="rating_1_star_title">Oh, no!</string>
+    <string name="rating_1_star_description">We want to know what made you unsatisfied</string>
+
+    <string name="rating_2_star_title">Oh, no!</string>
+    <string name="rating_2_star_description">We want to know what made you unsatisfied</string>
+    <string name="rating_3_star_title">Oh,unfortunately...</string>
+    <string name="rating_3_star_description">We look forward to receiving your feedback to improve.</string>
+
+    <string name="rating_4_star_title">Thank you!</string>
+    <string name="rating_4_star_description">We will do our best to provide an even better experience.</string>
+    <string name="rating_5_star_title">Wow, great!</string>
+    <string name="rating_5_star_description">Your satisfaction is our greatest motivation!</string>
+    <string name="feedback_title">Thank you for your feedback</string>
+    <string name="feedback_description">We will try our best to provide a better experience for users.</string>
+    <string name="seemore_sound">See more sound</string>
+    <string name="sounds">Sounds</string>
+
+</resources>
